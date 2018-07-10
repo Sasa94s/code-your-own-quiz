@@ -1,0 +1,78 @@
+{
+  "beginner":[
+    {
+      "id": "1",
+      "type": "numbers",
+      "question": "What least number should be added to 1056,\nso that the sum is completely divisible by 23?\nAnswer Example: X",
+      "answer": "2",
+      "explanation": "=> 1056 / 23 = 45\nRemainder = 21\n=> 21 + 2 = 23\nHence 2 should be added to 1056\nso that the sum will be divisible by 23"
+    },
+    {
+      "id": "2",
+      "type": "numbers",
+      "question": "Find the median of 29, 23, 25, 29, 30, 25, 28\nAnswer Example: X",
+      "answer": "28",
+      "explanation": "Arranging the observations in the ascending order,\nwe get 23, 25, 25, 28, 29, 29, 30.\nN = Number of observations = 7, This is an odd integer.\n=> Median = [ ( N + 1 ) / 2]th term\n= [ ( 7 + 1 ) / 2 ]th = 4th term in the ascending order data = 28"
+    },
+    {
+      "id": "3",
+      "type": "numbers",
+      "question": "Find the value of 6 + [ 5 - { 4 + ( 3 - ( 2 + 1 ) } ]\nAnswer Example: Rs. X",
+      "answer": "Rs. 7",
+      "explanation": "The rule to be followed for this type of problems is BODMAS\nand brackets in the order (), {}, [].\n=> 6 + [ 5 - { 4 + ( 3 - ( 2 + 1 ) } ]\n= 6 + [ 5 - { 4 + ( 3 - 3 ) } ]\n= 6 + [ 5 - { 4 + 0 } ]\n= 6 + [ 5 - 4 ]\n= Rs. 7"
+    }
+  ],
+  "intermediate":[
+    {
+      "id": 1,
+      "type": "age",
+      "question": "The average age of three boys is 15 years.\nIf their ages are in the ratio 3 : 5 : 7.\nFind the age of the youngest boy?\nAnswer Example: X years",
+      "answer": "9 years",
+      "explanation": "Let the age of 3 boys be 3x, 5x and 7x respectively.\n( 3x + 5x + 7x ) / 3 = 15\n=> ( 15x / 3 ) = 15\n15x = 15 * 3\nx = 3\nAge of youngest boy = 3x = 3 * 3\n= 9 years"
+    },
+    {
+      "id": "2",
+      "type": "age",
+      "question": "Ratio between the ages of Rahul and Deepak is 4 : 3.\nAfter 6 Years Rahul age will be 26 years.\nWhat is Deepak present age?\nAnswer Example: X",
+      "answer": "15",
+      "explanation": "Let the present ages of Rahul and Deepak is 4x and 3x.\nAfter 6 years Rahul age = 26 years.\n4x + 6 = 26\n4x = 20\n=> x = 5\nDeepak age is = 3x\n= 3 * 5\n= 15"
+    },
+    {
+      "id": "3",
+      "type": "age",
+      "question": "The average age of a woman and her daughter is 24 years.\nThe ratio of their ages is 3 : 1 respectively.\nWhat is the daughter age?\nAnswer Example: X years",
+      "answer": "12 years",
+      "explanation": "Let the age of the women and her daughter be 3x and x years respectively.\nAverage age of woman and her daughter = 24 years.\n3x + x = 2 * 24\n=> 4x = 48\n=> x = ( 48 / 4 )\n= 12\n=> Daughter age = 12 years"
+    },
+    {
+      "id": "4",
+      "type": "age",
+      "question": "The sum of the present ages of a father and his son is 60 years.\nSix years ago, Fathers age was five times the age of the son.\nFind son age after 6 years?\nAnswer Example: X years",
+      "answer": "20 years",
+      "explanation": "Let the present ages of son and father be x and ( 60 - x ) years respectively.\\n( 60 - x ) - 6 = 5 ( x - 6 )\n54 - x = 5x - 30\n6x = 84\nx = 14\n=> Son age after 6 years = ( x + 6 )\n= 20 years"
+    }
+  ],
+  "advanced":[
+    {
+      "id": "1",
+      "type": "age",
+      "question": "Rajeev age after 15 years will be 5 times his age 5 years back.\nWhat is the present age of rajeev?\nAnswer Example: X years",
+      "answer": "10 years",
+      "explanation": "Let Rajeev present age be x years.\nRajeev age after 15 years = ( x + 15 )\nRajeev age 5 years back = ( x - 5 )\nx + 15 = 5 * ( x - 5 )\nx + 15 = 5x - 25\n4x = 40\nx = 40 / 4\nx = 10"
+    },
+    {
+      "id": "2",
+      "type": "numbers",
+      "question": "In a group of ducks and buffaloes,\nthe total number of legs are 24 more than twice the number of heads.\nFind the total number of buffaloes?\nAnswer Example: X",
+      "answer": "12",
+      "explanation": "Let the number of buffaloes be x.\nNumber of ducks be y.\n=> 4x + 2y = [ 2 * ( x + y ) ] + 24\n4x + 2y = ( 2x + 2y ) + 24\n2x = 24\nx = 24 / 2\nx = 12"
+    },
+    {
+      "id": "3",
+      "type": "numbers",
+      "question": "A number is divided by 406 leaves remainder 115,\nwhat will be the remainder when it will be divided by 29?\nAnswer Example: X",
+      "answer": "28",
+      "explanation": "Let the number be N.\nSo N = 406x + 115.\nNow divide this number by 29.\nAs 406 is exactly divisible by 29,\nwe have to divide 115 by 29 and find the remainder.\nSo remainder = 28"
+    }
+  ]
+}
