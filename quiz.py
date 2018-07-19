@@ -16,13 +16,13 @@ def initialize_quiz(chosen_level):
 
     # appending questions in a list
     questions_list = []
-    for q in question_json[chosen_level]:
+    for question in question_json[chosen_level]:
         question_input = Question(
-            id=q['id'],
-            type=q['type'],
-            question=q['question'],
-            answer=q['answer'],
-            explanation=q['explanation']
+            id=question['id'],
+            type=question['type'],
+            question=question['question'],
+            answer=question['answer'],
+            explanation=question['explanation']
             )
         questions_list.append(question_input)
     print("Questions have been loaded for {0} level".format(chosen_level))
@@ -30,7 +30,12 @@ def initialize_quiz(chosen_level):
 
 
 def ask_question(current_question):
-    """Function to get question in appropriate format"""
+    """Function to get question in appropriate format
+    Args:
+        current_question: an instance of question object
+    Returns:
+        formatted numbered question
+    """
 
     return """
     Question No. {0}:
@@ -39,7 +44,13 @@ def ask_question(current_question):
 
 
 def checking_answer(question, ans_input):
-    """Function to check if the user's answer is matched to the model answer"""
+    """Function to check if the user's answer is matched to the model answer
+    Args:
+        question: an instance of question object
+        ans_input: a string of the answer entered by user
+    Returns:
+        boolean whether user's answer matched the model answer
+    """
 
     if question.answer.lower() == ans_input.lower():
         question.solved = True
@@ -47,7 +58,12 @@ def checking_answer(question, ans_input):
 
 
 def get_explanation(q_list):
-    """Function to get explanations of wrongly answered questions"""
+    """Function to get explanations of wrongly answered questions
+    Args:
+        q_list: a list of question instances which is displayed to user
+    Returns:
+        explanations of incorrectly solved questions
+    """
 
     explanation_text = []
     for question in q_list:
@@ -94,12 +110,21 @@ def start_quiz():
     # assigning questions based on level
     q_list = initialize_quiz(difficulty)
 
+    another_question = True
     for question in q_list:
+        # in case user wants to continue the quiz when guesses correctly
+        if not another_question:
+            break
         answer = raw_input(ask_question(question))
-        if checking_answer(question, answer):
-            print("Correct answer")
-        else:
-            print("Wrong answer")
+        retry = True
+        while retry:
+            retry = False
+            if checking_answer(question, answer):
+                # asks user if he wants to get to the next question
+                another_question = raw_input("Correct answer, Type 'Y' If you want the next question\n") == 'Y'
+            else:
+                # asks the user he wants to try again the current question
+                retry = raw_input("Wrong Answer, Type 'Y' If you want to try again.\n") == 'Y'
 
     explanation_result = get_explanation(q_list)
 
